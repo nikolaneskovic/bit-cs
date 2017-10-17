@@ -3,7 +3,7 @@ function konverter(string) {
     var count = 0;
 
     for (var i = 0; i < string.length; i++) {
-        if (!isNan(parseInt(array[i]))) {
+        if (!isNaN(parseInt(array[i]))) {
 
             array[i - count] = parseFloat(array[i]);
 
@@ -17,4 +17,4 @@ return array;
 }
 
 }
-konverter("neske1991", 2, 3);
+console.log(konverter(["dad",12,31,true,"123"]));

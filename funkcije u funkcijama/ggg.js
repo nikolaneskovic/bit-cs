@@ -1,0 +1,7 @@
+var result = (function () {
+    //
+    //
+    //
+    //
+
+}) (); 
