@@ -2,7 +2,7 @@ function veca(num){
 
     var sum = 0; 
     var avg = 0;
-    var result;
+    var result = [];
     
 
     for (var i = 0; i < arguments.length; i++){
@@ -10,12 +10,12 @@ function veca(num){
         avg =  sum / arguments.length;   
 
         if (arguments[i] > avg){
-            result = arguments;
-           
+            result[i]=arguments[i];
+               
         }
-
+        
     }
-         
+    console.log(result);
     console.log(sum);
     console.log(avg);
 
