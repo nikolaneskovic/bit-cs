@@ -36,7 +36,7 @@
     filmex.addProgram(adults);
     filmex.addProgram(kids);
 
-    console.log(filmex.getData());
+    console.log(filmex.getInfo());
 })();
 
 function Genre(name) {
@@ -71,7 +71,7 @@ function Program(date) {
         var result = '';
         var count = 0;
         for (var i = 0; i < this.listOfMovies.length; i++) {
-            result = result + '\t\t' + this.listOfMovies[i].getData() + '\n';
+            result += '\t\t' + this.listOfMovies[i].getData() + '\n';
             count += this.listOfMovies[i].length;
         }
 
@@ -80,6 +80,7 @@ function Program(date) {
 
     this.addMovie = function (movie) {
         this.listOfMovies.push(movie);
+        
     }
 }
 
@@ -88,11 +89,12 @@ function Festival(name) {
     this.listOfPrograms = [];
     this.totalMovieNumber = 0;
 
-    this.getData = function () {
+    this.getInfo = function () {
         var result = '';
         for (var i = 0; i < this.listOfPrograms.length; i++) {
-            result += this.listOfPrograms[i].getData();
-            this.totalMovieNumber += this.listOfPrograms[i].listOfMovies.length;
+            var program = this.listOfPrograms[i]
+            result += program.getData();
+            this.totalMovieNumber += program.listOfMovies.length;
         }
 
         return this.name + ', ' + this.totalMovieNumber + '\n\n' + result;
